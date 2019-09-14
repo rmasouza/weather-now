@@ -1,13 +1,12 @@
 import axios from 'axios';
+import IWeatherService from './IWeatherService';
+import WeatherResponse from '../models/WeatherResponse';
 
 /**
  * WeatherService
  */
-import IWeatherService from './IWeatherService';
-import WeatherResponse from '../models/WeatherResponse';
-
 export default class WeatherService implements IWeatherService {
-    async getWeatherData(location: string): Promise<any> {
+    async getWeatherData(location: string): Promise<WeatherResponse> {
         const response = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
             params: {
                 q: location,
