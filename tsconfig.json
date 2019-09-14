@@ -16,14 +16,20 @@
     "removeComments": true,
     "isolatedModules": true,
     "strict": true,
-     "noImplicitAny": true,
-     "strictNullChecks": true,
-     "alwaysStrict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "preserveConstEnums": true,
-     "experimentalDecorators": true,
+    "experimentalDecorators": true,
     "importHelpers": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
 }
