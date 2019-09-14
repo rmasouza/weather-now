@@ -32,10 +32,19 @@ const webpackConfig = {
     },
     module: {
         rules: [
-            {test: /\.tsx?$/,
+            {
+                test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: /node_modules/},
-            {test: /\.css$/, use: ['bstyle-loader', 'css-loader']},
+                exclude: /node_modules/
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ]
+            },
         ],
     },
     mode: process.env.NODE_ENV,
@@ -61,7 +70,7 @@ const webpackConfig = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'assets/index.html',
-            favicon: 'assets/icon.ico',
+            favicon: 'assets/favicon_32x32.png',
             inlineSource: 'runtime~.+\\.js',
         }),
         new InlineSourcePlugin(),
@@ -73,7 +82,7 @@ const webpackConfig = {
                     urlPattern: /^https?.*/,
                     handler: 'NetworkFirst',
                     options: {
-                        cacheName: 'MyPwaCache',
+                        cacheName: 'WheatherNowCache',
                         expiration: {
                             maxEntries: 200,
                         },
@@ -87,9 +96,9 @@ const webpackConfig = {
             openAnalyzer: false,
         }),
         new WebpackPwaManifest({
-            name: 'Wheather APP',
-            short_name: 'Wheater APP',
-            description: 'My Awesome Wheather Web App!',
+            name: 'Wheather Nows',
+            short_name: 'Wheather Now',
+            description: 'My Awesome Wheather Now Web App!',
             background_color: '#fff',
             theme_color: '#fff',
             display: 'standalone',
@@ -134,4 +143,4 @@ const webpackConfig = {
     },
 };
 
-module.exports=webpackConfig;
+module.exports = webpackConfig;
