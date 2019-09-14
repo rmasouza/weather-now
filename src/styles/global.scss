@@ -1,0 +1,14 @@
+@import "./colors.scss";
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+
+body, html, main {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: $app-background;
+}
