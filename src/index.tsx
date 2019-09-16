@@ -9,6 +9,6 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// register();
+register();
 
 

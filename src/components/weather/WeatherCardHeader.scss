@@ -1,0 +1,10 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/colors.scss';
+
+.weather-card-header {
+    color: $primary_text;
+    text-align: center;
+    border-bottom: 1px solid $divider;
+    padding: 14px;
+    font-size: 1em;
+}

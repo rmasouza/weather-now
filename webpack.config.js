@@ -96,18 +96,33 @@ const webpackConfig = {
             openAnalyzer: false,
         }),
         new WebpackPwaManifest({
-            name: 'Wheather Nows',
+            name: 'Wheather Now',
             short_name: 'Wheather Now',
-            description: 'My Awesome Wheather Now Web App!',
+            description: 'My Awesome Wheather Now Progressive Web App!',
             background_color: '#fff',
-            theme_color: '#fff',
+            theme_color: '#69a3ff',
             display: 'standalone',
             start_url: '.',
             orientation: 'portrait',
             icons: [
                 {
-                    src: path.resolve('src/assets/icon.png'),
-                    sizes: [192, 256, 512],
+                    src: path.resolve('src/assets/icon-512x512.png'),
+                    sizes: [512],
+                    ios: true,
+                },
+                {
+                    src: path.resolve('src/assets/icon-384x384.png'),
+                    sizes: [384],
+                    ios: true,
+                },
+                {
+                    src: path.resolve('src/assets/icon-192x192.png'),
+                    sizes: [192],
+                    ios: true,
+                },
+                {
+                    src: path.resolve('src/assets/icon-144x144.png'),
+                    sizes: [144],
                     ios: true,
                 },
             ],

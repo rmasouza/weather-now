@@ -1,0 +1,23 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/colors.scss';
+
+.weather-card-footer {
+    background-color: $card-footer;
+    padding: 12px;
+    > .last-updated {
+        text-align: center;
+        color: $secondary_text;
+        font-size: 12px;
+    }
+
+    > .details {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        padding-bottom: inherit;
+        &.-hide {
+            padding-bottom: 0;
+            display: none;
+        }
+    }
+}

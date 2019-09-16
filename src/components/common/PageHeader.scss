@@ -1,6 +1,8 @@
+@import '../../styles/constants.scss';
+
 .page-header {
     background-color: #fff;
-    min-height: 56px;
+    min-height: $header-height;
     width: 100%;
     display: flex;
     justify-content: center;

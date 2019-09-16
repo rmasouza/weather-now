@@ -1,4 +1,25 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/constants.scss';
 .page-container {
-    padding: 48px;
+    margin: 0px 12px ;
+    height: calc(100% - #{$header-height});
     overflow-y: auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-areas: "Nuuk-GL Urubici-BR Nairobi-KE";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 25px;
+}
+
+@include for-small-screen {
+    .page-container {
+        margin: 12px 0px;
+        height: calc(100% - #{$header-height} - 24px);
+        grid-template-rows: max-content max-content max-content;
+        grid-template-columns: 1fr;
+        grid-template-areas: "Urubici-BR" "Nuuk-GL"  "Nairobi-KE";
+
+    }
 }

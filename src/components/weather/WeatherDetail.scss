@@ -1,0 +1,23 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/colors.scss';
+
+.weather-detail {
+    text-align: center;
+    > .unit-legend {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        color: $secondary_text;
+    }
+
+    > .value {
+        display: block;
+        font-size: 0.875em;
+        color: $primary_text;
+    }
+
+    > .value > .unit {
+        vertical-align: baseline;
+        font-size: 0.667em;
+    }
+}

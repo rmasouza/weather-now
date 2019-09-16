@@ -1,0 +1,16 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/colors.scss';
+
+.weather-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0 $box-shadow;
+    overflow: hidden;
+    width: 256px;
+}
+
+@include for-small-screen {
+    .weather-card {
+        margin: auto;
+    }
+}

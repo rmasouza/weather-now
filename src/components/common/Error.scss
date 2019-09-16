@@ -1,0 +1,14 @@
+@import '../../styles/colors.scss';
+
+.error-component {
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    > .message {
+        color: $red;
+    }
+
+    > .button-component {
+        margin: 0 auto;
+    }
+}

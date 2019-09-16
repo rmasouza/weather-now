@@ -11,6 +11,7 @@ export default class WeatherService implements IWeatherService {
             params: {
                 q: location,
                 appId: process.env.OPEN_WEATHER_KEY,
+                units: 'metric',
             },
         });
 

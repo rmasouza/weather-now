@@ -6,8 +6,10 @@ module.exports = {
         '^src(.*)$': '<rootDir>/src$1',
         '^test(.*)$': '<rootDir>/test$1',
     },
+    transform: {
+        '.+\\.(css|scss)$': 'jest-transform-css',
+    },
     preset: 'ts-jest',
-    testEnvironment: 'node',
     testRegex: '.spec.(tsx?|ts?)$',
     testPathIgnorePatterns: ['../node_modules/'],
 };

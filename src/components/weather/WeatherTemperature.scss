@@ -1,0 +1,24 @@
+
+@import '../../styles/colors.scss';
+
+.weather-temperature {
+    text-align: center;
+    //font-weight: bold;
+    font-size: 5em;
+
+    &.-normal {
+        color: $orange;
+    }
+
+    &.-hot {
+        color: $red;
+    }
+
+    &.-cold {
+        color: $blue;
+    }
+
+    > sup {
+        vertical-align: text-top
+    }
+}
